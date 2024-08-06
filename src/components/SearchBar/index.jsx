@@ -1,8 +1,12 @@
 import React from 'react'
 
+import { CiSearch } from "react-icons/ci";
+
+import './styles.css'
+
 function SearchBar() {
   return ( 
-    <form >
+  <form className='search-bar'>
     <input 
       type="search" 
       placeholder='Buscar produtos' 
@@ -10,7 +14,7 @@ function SearchBar() {
       required
     />
     <button type='button' className='search__button'>
-      icon
+      <CiSearch />
     </button>
   </form>
    );

@@ -5,8 +5,9 @@
   max-width: 500px;
   background-color: white;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
-  gap: 13px;
-  padding-right: 13px;
+  gap: 10px;
+  padding-right: 10px;
+  border-radius: 5px;
 }
 
 .search__input {
@@ -17,6 +18,7 @@
   font-size: 0.8rem;
   font-weight: 500;
   border-right: 1px solid #ddd;
+  margin: 2px;
 }
 
 .search__button {
@@ -27,4 +29,6 @@
   justify-content: center;
   align-items: center;
   color: #333;
+  cursor: pointer;
+  padding: 0 8px;
 }

@@ -18,7 +18,7 @@ const [searchValue, setSearchValue] = useState('')
       required
     />
     <button type='button' className='search__button'>
-      <CiSearch />
+      <CiSearch  size={20}/>
     </button>
   </form>
    );

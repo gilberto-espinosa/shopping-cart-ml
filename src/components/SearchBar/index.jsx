@@ -3,12 +3,20 @@ import React, {useState} from 'react'
 import { CiSearch } from "react-icons/ci";
 
 import './styles.css'
+import fetchProducts from '../../api/fetchProducts';
 
 function SearchBar() {
 const [searchValue, setSearchValue] = useState('')
 
+const headleSearch = async (event) => {
+  event.preventDefault();
+  const products = await fetchProducts(searchValue);
+  console.log(products)
+  setSearchValue('')
+}
+
   return ( 
-  <form className='search-bar'>
+  <form className='search-bar' onSubmit={headleSearch}>
     <input 
       type="search"
       value={searchValue}

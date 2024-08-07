@@ -4,9 +4,14 @@ import CartItem from "../CartItem";
 import AppContext from '../../context/AppContext'
 
 import './styles.css'
+import formatCurrency from "../../utils/formatCurrency";
 
 function Cart() {
   const {cartItems} = useContext(AppContext)
+
+  const totalPrice = cartItems.reduce((acc, item) => {
+    return item.price + acc;
+  }, 0)
 
   return ( 
     <section className="cart">
@@ -16,7 +21,9 @@ function Cart() {
         ))}
       </div>
 
-      <div className="cart-resume">resume</div>
+      <div className="cart-resume">
+        {formatCurrency(totalPrice, 'BRL')}
+      </div>
     </section>
    );
 }

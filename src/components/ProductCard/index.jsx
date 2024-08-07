@@ -1,5 +1,5 @@
-import propTypes from 'prop-types'
 import React, { useContext } from "react";
+import propTypes from 'prop-types';
 
 import { BsFillCartPlusFill } from 'react-icons/bs';
 import formatCurrency from '../../utils/formatCurrency';
@@ -10,10 +10,10 @@ import './styles.css'
 function ProductCard({data}) {
   const {title, thumbnail, price} = data;
 
-  const {cartItems, setcartItems} = useContext(AppContext)
+  const {cartItems, setCartItems} = useContext(AppContext)
 
   const handleAddCart = () => {
-    setcartItems([...cartItems, data])
+    setCartItems([...cartItems, data])
   };
 
   return ( 
@@ -41,5 +41,5 @@ function ProductCard({data}) {
 export default ProductCard;
 
 ProductCard.prototype = {
-  data: propTypes.shape({})
+  data: propTypes.object
 }.isRequired;

@@ -16,7 +16,7 @@ function Cart() {
         ))}
       </div>
 
-      <div className="cart-resume"></div>
+      <div className="cart-resume">resume</div>
     </section>
    );
 }
